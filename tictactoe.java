@@ -89,6 +89,7 @@ public class tictactoe implements ActionListener{
         }
     }
 
+    //fix
     public void check(){
         if( (button[0].getText()=="X") && (button[1].getText()=="X") && (button[2].getText()=="X") ){
             button[0].setForeground(new Color(255,0,0));
