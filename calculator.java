@@ -29,9 +29,11 @@ public class calculator implements ActionListener{
         frame = new JFrame("Calculator");
         frame.setSize(300, 400);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setBackground(Color.red);
         frame.setLayout(null);
         frame.setResizable(false);
-
+        frame.getContentPane().setBackground(Color.gray);
+        
         // new textfield for display
         textfield = new JTextField();
         textfield.setBounds(25, 10, 230, 30);
@@ -88,7 +90,6 @@ public class calculator implements ActionListener{
         panel = new JPanel();
         panel.setBounds(25, 50, 230, 250);
         panel.setLayout(new GridLayout(4,4,0,0));
-        panel.setBackground(Color.white);
 
         // add all buttons to the panel
         panel.add(numberButtons[7]);
