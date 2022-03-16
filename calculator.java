@@ -8,6 +8,19 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
+/**
+ * This class creates a calculator that can be used to perform basic arithmetic operations.
+ * @author George Jose P. Montano
+ * @version 1.0
+ * @since 1.0
+ * @see JFrame
+ * @see JPanel
+ * @see JButton
+ * @see JTextField
+ * @see JLabel
+ * @see JOptionPane
+ * @see ActionListener
+ */
 public class calculator implements ActionListener{
     JFrame frame;
     JTextField textfield;
@@ -47,7 +60,7 @@ public class calculator implements ActionListener{
         addButton = new JButton("+");
         subtractButton = new JButton("-");
         multiplyButton = new JButton("x");
-        divideButton = new JButton("÷");
+        divideButton = new JButton("/");
         equalsButton = new JButton("=");
         decimalButton = new JButton(".");
         negativeButton = new JButton("(-)");
@@ -117,8 +130,12 @@ public class calculator implements ActionListener{
         frame.add(textfield);
         frame.setVisible(true);
     }
-
+    
     @Override
+    /**
+     * @param event is the action event that is triggered
+     * method that is called when an action is performed on a button in the calculator window 
+     */
     public void actionPerformed(ActionEvent event) {
         for(int i = 0; i<10; i++){
             if(event.getSource()==numberButtons[i]){
@@ -205,6 +222,11 @@ public class calculator implements ActionListener{
         } 
     }
 
+    /**
+     * @param args the command line arguments
+     * 
+     * main method that creates the calculator window and sets it to visible 
+     */
     public static void main(String[] args) {
         calculator calc = new calculator();
     }
